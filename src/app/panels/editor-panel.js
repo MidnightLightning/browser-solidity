@@ -1,6 +1,8 @@
 var csjs = require('csjs-inject')
 var yo = require('yo-yo')
 var EventManager = require('ethereum-remix').lib.EventManager
+var styleGuide = require('../../style-guide')
+var styles = styleGuide()
 
 var css = csjs`
   .tabsbar             {
@@ -17,7 +19,7 @@ var css = csjs`
     overflow          : hidden;
   }
   .files              {
-    position          : relative; 
+    position          : relative;
     list-style        : none;
     margin            : 0;
     font-size         : 15px;
@@ -34,13 +36,13 @@ var css = csjs`
   .changeeditorfontsize i {
     cursor            : pointer;
     display           : block;
-    color             : #111111;
+    color             : ${styles.colors.black};
   }
   .changeeditorfontsize i {
     cursor            : pointer;
   }
   .changeeditorfontsize i:hover {
-    color             : orange;
+    color             : ${styles.colors.orange};
   }
   .buttons            {
     display           : flex;
@@ -54,13 +56,13 @@ var css = csjs`
     padding           : 10px;
     width             : 100%;
     font-weight       : bold;
-    color             : black;
+    color             : ${styles.colors.black};
   }
   .toggleLHP i        {
     cursor            : pointer;
   }
   .toggleLHP i:hover  {
-    color             : orange;
+    color             : ${styles.colors.orange};
   }
   .scroller           {
     position          : absolute;
@@ -69,7 +71,7 @@ var css = csjs`
     cursor            : pointer;
     padding           : 0 0.9em;
     vertical-align    : middle;
-    background-color  : rgba(255, 255, 255, 0.8);
+    background-color  : ${styles.colors.white};
     height            : 100%;
     font-size         : 1.3em;
   }
@@ -87,14 +89,14 @@ var css = csjs`
     margin-top        : 0.5em;
     padding           : 0.6em;
     font-weight       : bold;
-    color             : black;
+    color             : ${styles.colors.black};
     right             : 0;
   }
   .toggleRHP i        {
     cursor            : pointer;
   }
   .toggleRHP i:hover  {
-    color             : orange;
+    color             : ${styles.colors.orange};
   }
   .show               {
     opacity           : 1;
